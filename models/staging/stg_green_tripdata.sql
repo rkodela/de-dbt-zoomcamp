@@ -31,5 +31,5 @@ select
     {{ get_payment_type_description('payment_type') }} as payment_type_description, 
     cast(congestion_surcharge as numeric) as congestion_surcharge
 
-from {{ source('staging','external_green_data_all') }}
+from {{ source('trips_data_all','external_green_data_all') }}
 limit 100
