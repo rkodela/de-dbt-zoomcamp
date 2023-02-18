@@ -1,0 +1,15 @@
+version: 2
+
+packages:
+ - package: dbt-labs/dbt_utils
+   version: 0.8.0
+
+sources:
+  - name: staging
+    database: de-course-01
+    schema: trips_data_all
+
+
+    tables:
+      - name: external_green_data_all
+      - name: external_yellow_tripdata_all
